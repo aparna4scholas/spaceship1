@@ -9,6 +9,9 @@ class Ship {
     }
     attack(ship) {
         console.log(this.name+ 'attacking ship ->' +ship.name);
+        let randomvalue = Math.random();
+        
+
 
     }
 }
