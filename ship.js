@@ -13,3 +13,4 @@ class Ship {
 }
 // hull - between 3 and 6
 // firepower - between 2 and 4
+// accuracy - between .6 and .8
