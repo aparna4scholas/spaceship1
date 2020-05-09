@@ -7,4 +7,7 @@ class Ship {
 
 
     }
+    attack() {
+
+    }
 }
