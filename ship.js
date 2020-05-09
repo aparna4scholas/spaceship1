@@ -13,6 +13,7 @@ class Ship {
         if(randomvalue < ship.accuracy) {
         console.log(this.name+ "attacked succesfully "+ship.name);
         //reduce hull
+         ship.hull = ship.hull - ship.firepower;
          
         }
 
