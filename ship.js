@@ -32,3 +32,7 @@ class Ship {
 
 USS = new Ship(20,5,0.7,"USS");
 
+alien1 = new Ship()
+
+let allaliens = [alien1,alien2,alien3,alien4,alien5,alien6];
+
