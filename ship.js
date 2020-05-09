@@ -1,13 +1,14 @@
 class Ship {
     costructor(hull,firepower,accuracy,name){
         this.hull = hull; // -20,5
-        this.firepower = firepower;// 
-        this.accuracy = accuracy;// 
+        this.firepower = firepower;// -5
+        this.accuracy = accuracy;// - .7
         this.name = name;
 
 
     }
-    attack() {
+    attack(ship) {
+        console.log(this.name+ 'attacking ship ->' +ship.name);
 
     }
 }
