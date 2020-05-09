@@ -32,7 +32,20 @@ class Ship {
 
 USS = new Ship(20,5,0.7,"USS");
 
-alien1 = new Ship(Math.floor(Math.random()))
+alien1 = new Ship(Math.floor(Math.random() * (6 - 3 + 1) + 3),
+Math.floor(Math.random() * (4 - 2 + 1) + 2),
+Math.floor(Math.random() * (0.8 - 0.6 + 1) + 0.6),"alien1");
+
+alien2 = new Ship(Math.floor(Math.random() * (6 - 3 + 1) + 3),
+Math.floor(Math.random() * (4 - 2 + 1) + 2),
+Math.floor(Math.random() * (0.8 - 0.6 + 1) + 0.6),"alien2");
+
+alien3 = new Ship(Math.floor(Math.random() * (6 - 3 + 1) + 3),
+Math.floor(Math.random() * (4 - 2 + 1) + 2),
+Math.floor(Math.random() * (0.8 - 0.6 + 1) + 0.6),"alien3");
+
+
+
 
 let allaliens = [alien1,alien2,alien3,alien4,alien5,alien6];
 
