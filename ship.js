@@ -14,7 +14,10 @@ class Ship {
         console.log(this.name+ "attacked succesfully "+ship.name);
         //reduce hull
          ship.hull = ship.hull - ship.firepower;
-         
+         if(ship.hull <= 0){
+             console.log(" destroyed " +ship.name);
+
+    }
         }
 
         
