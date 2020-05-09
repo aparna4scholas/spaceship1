@@ -10,6 +10,12 @@ class Ship {
     attack(ship) {
         console.log(this.name+ 'attacking ship ->' +ship.name);
         let randomvalue = Math.random();
+        if(randomvalue < ship.accuracy) {
+        console.log(this.name+ "attacked succesfully "+ship.name);
+        //reduce hull
+         
+        }
+
         
 
 
