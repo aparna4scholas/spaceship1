@@ -29,3 +29,6 @@ class Ship {
 // firepower - between 2 and 4
 // accuracy - between .6 and .8
 // Math.floor(Math.random() * (max - min + 1) + min);
+
+USS = new Ship(20,5,0.7,"USS");
+
