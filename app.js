@@ -16,6 +16,7 @@ class Ship {
          ship.hull = ship.hull - ship.firepower;
          if(ship.hull <= 0){
              console.log(" destroyed " +ship.name);
+             allaliens.pop(ship);
 
     }
         }
@@ -56,17 +57,18 @@ alien6 = new Ship(Math.floor(Math.random() * (6 - 3 + 1) + 3),
 Math.floor(Math.random() * (4 - 2 + 1) + 2),
 Math.floor(Math.random() * (0.8 - 0.6 + 1) + 0.6),"alien6");
 
+let allaliens = [alien1,alien2,alien3,alien4,alien5,alien6];
 while(allaliens.length > 0) {
     for(let i=0;i<allaliens.length;i++){
         USS.attack(allaliens[i]);
     }
-    console.log(allaliens.length);
+    console.log(" allaliens.length ");
 }
 
 
 
 
 
-let allaliens = [alien1,alien2,alien3,alien4,alien5,alien6];
+
 
 
