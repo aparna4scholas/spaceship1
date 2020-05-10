@@ -1,3 +1,5 @@
+
+
 class Ship {
     
     constructor(hull, firepower, accuracy, name) 
@@ -10,6 +12,7 @@ class Ship {
 
     attack(ship,index) {
         console.log(this.name + 'attacking ship ->' + ship.name);
+        
         let randomvalue = Math.random();
         if (randomvalue < ship.accuracy) {
             console.log(this.name + "attacked succesfully " + ship.name);
@@ -22,6 +25,7 @@ class Ship {
             }
         }else{
             console.log(" missed attack "+ ship.hull);
+            this.hull = this.hull - this.firepower;
         }
     }
 }
@@ -59,12 +63,34 @@ let alien6 = new Ship(Math.floor(Math.random() * (6 - 3 + 1) + 3),
 
 let allaliens = [alien1, alien2, alien3, alien4, alien5, alien6];
 
-while (allaliens.length > 0) {
-    for (let i = 0; i < allaliens.length; i++) {
-        USS.attack(allaliens[i],i);
-    }
+function startBattle(){
+    while (allaliens.length > 0) {
+        for (let i = 0; i < allaliens.length; i++) {
+             USS.attack(allaliens[i],i);
+             
+        }
+     if(allaliens.length === 0){
+         console.log("USS WON ");
+         break;
+     }   
+     let p = prompt(' do you wanna continue (y/n)');
+     if(p === 'n'){
+         break;
+     }
     
-    console.log(" allaliens.length "+allaliens.length);
+       /* 
+       let p = prompt('Do you want to continue?');
+       if(p){
+           switch(p){
+              case no: break;
+           }
+       }
+       */
+    
+        console.log(" allaliens.length "+allaliens.length);
+    
+}
+
 }
 
 
