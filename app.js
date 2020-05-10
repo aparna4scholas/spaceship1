@@ -8,11 +8,7 @@ class Ship {
         this.name = name;
     }
 
-    check(){
-        console.log()
-    }
-
-    attack(ship) {
+    attack(ship,index) {
         console.log(this.name + 'attacking ship ->' + ship.name);
         let randomvalue = Math.random();
         if (randomvalue < ship.accuracy) {
@@ -21,8 +17,11 @@ class Ship {
             ship.hull = ship.hull - ship.firepower;
             if (ship.hull <= 0) {
                 console.log(" destroyed " + ship.name);
-                allaliens.pop(ship);
+                allaliens.splice(index,1);
+                console.log("remaining ships "+allaliens);
             }
+        }else{
+            console.log(" missed attack "+ ship.hull);
         }
     }
 }
@@ -62,9 +61,10 @@ let allaliens = [alien1, alien2, alien3, alien4, alien5, alien6];
 
 while (allaliens.length > 0) {
     for (let i = 0; i < allaliens.length; i++) {
-        USS.attack(allaliens[i]);
+        USS.attack(allaliens[i],i);
     }
-    console.log(" allaliens.length ");
+    
+    console.log(" allaliens.length "+allaliens.length);
 }
 
 
