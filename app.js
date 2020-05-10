@@ -69,14 +69,22 @@ function startBattle(){
              USS.attack(allaliens[i],i);
              
         }
-     if(allaliens.length === 0){
+     if(allaliens.length == 0){
          console.log("USS WON ");
+         alert('USS WON');
          break;
      }   
-     let p = prompt(' do you wanna continue (y/n)');
-     if(p === 'n'){
-         break;
+
+     if(USS.hull <= 0){
+        console.log("aliens WON ");
+        alert('aliens WON');
+        break;
      }
+     
+    //  let p = prompt(' do you wanna continue (y/n)');
+    //  if(p === 'n'){
+    //      break;
+    //  }
     
        /* 
        let p = prompt('Do you want to continue?');
